@@ -19,7 +19,7 @@ export class __Blank extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
   }
-  state = { Input_7: "", Input_9: "" }
+  state = { Input_7: "", Input_9: "", Toggle_11: true }
   render = () => (
     <View style={this.props.themedStyle.View_1}>
       <Text style={this.props.themedStyle.Text_3}>Login</Text>
@@ -50,6 +50,15 @@ export class __Blank extends React.Component {
         style={this.props.themedStyle.Input_9}
         value={this.state.Input_9}
         onChangeText={nextValue => this.setState({ Input_9: nextValue })}
+      />
+      <Toggle
+        text="Keep me logged in"
+        activeColor="#409EFF"
+        inactiveColor="#C0CCDA"
+        disabled={false}
+        style={this.props.themedStyle.Toggle_11}
+        checked={this.state.Toggle_11}
+        onChange={nextChecked => this.setState({ Toggle_11: nextChecked })}
       />
     </View>
   )
@@ -163,6 +172,31 @@ _Blank = withStyles(__Blank, theme => ({
     backgroundColor: "#ffffff",
     fontStyle: "normal",
     fontWeight: "normal",
+    borderColor: "#000000",
+    borderStyle: "solid",
+    borderWidth: 0,
+    borderLeftWidth: 0,
+    borderRightWidth: 0,
+    borderTopWidth: 0,
+    borderBottomWidth: 0,
+    borderRadius: 0,
+    textAlign: "left",
+    textAlignVertical: "center",
+    textDecorationLine: "none",
+    textTransform: "none",
+    lineHeight: 12,
+    letterSpacing: 0
+  },
+  Toggle_11: {
+    marginLeft: 0,
+    marginRight: 0,
+    marginTop: 5,
+    marginBottom: 5,
+    paddingLeft: 5,
+    paddingRight: 5,
+    paddingTop: 5,
+    paddingBottom: 5,
+    overflow: "visible",
     borderColor: "#000000",
     borderStyle: "solid",
     borderWidth: 0,
